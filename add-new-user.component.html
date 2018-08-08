@@ -1,0 +1,49 @@
+<form [formGroup]="UserFrm" (ngSubmit)="SaveUser()">
+    <div>
+        <label> Name :</label>
+        <div>
+            <input type="text" formControlName="name" />
+        </div>
+       
+    </div>
+
+
+    <div>
+        <label> User Name :</label>
+        <div>
+            <input type="text" formControlName="username" />
+        </div>
+
+    </div>
+
+
+    <div>
+        <label> Emaild ID :</label>
+        <div>
+            <input type="text" formControlName="email" />
+        </div>
+        
+    </div>
+
+
+    <div>
+        <label> Mobile No:</label>
+        <div>
+            <input type="text" formControlName="mobile" />
+        </div>
+
+    </div>
+
+    <div>
+        <label> Website :</label>
+        <div>
+            <input type="text" formControlName="website" />
+        </div>
+
+    </div>
+    <hr>
+    <div>
+        <input type="submit" value="Save" [disabled]="UserFrm.invalid" />
+    </div>
+   
+</form>

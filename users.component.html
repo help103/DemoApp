@@ -1,0 +1,27 @@
+<div *ngIf="users$">
+  <h1>Users List</h1>
+    <div align="right">
+        <a routerLink="/addNew/">         <i class="material-icons">    create_new_folder    </i></a>
+       
+    </div><hr>
+<ul>
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{user.userId}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+      <li><a href="http://{{ user.website }}">{{ user.website }}</a></li>
+    </ul>
+    <div align="right">
+        <a routerLink="/editUser/{{user.userId}}">
+          <i class="material-icons">             edit         </i></a>
+        <a routerLink="/delete/{{user.userId}}">
+          <i class="material-icons" >     delete     </i></a>
+    </div>
+
+    <hr>
+  </li>
+</ul>
+</div>
+
+
